@@ -1,4 +1,4 @@
-package com.example.orozbek.base;
+package com.example.orozbek.ui.base;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;

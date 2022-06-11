@@ -1,17 +1,18 @@
 package com.example.orozbek.ui.fragment.main;
 
-import androidx.lifecycle.ViewModelProvider;
-
-import com.example.orozbek.base.BaseFragment;
+import com.example.orozbek.ui.base.BaseFragment;
 import com.example.orozbek.databinding.FragmentMainBinding;
+import com.example.orozbek.ui.fragment.main.adapter.AdapterMain;
+
+import javax.inject.Inject;
 
 import dagger.hilt.android.AndroidEntryPoint;
 
 
 @AndroidEntryPoint
 public class MainFragment extends BaseFragment<FragmentMainBinding> {
-
-    private MainViewModel viewModel;
+    @Inject
+    public MainViewModel viewModel;
     private AdapterMain adapterMainFragment;
 
     @Override
@@ -26,7 +27,6 @@ public class MainFragment extends BaseFragment<FragmentMainBinding> {
     }
 
     private void initViewModel() {
-        viewModel = new ViewModelProvider(requireActivity()).get(MainViewModel.class);
         viewModel.getPeople();
     }
 
@@ -37,9 +37,7 @@ public class MainFragment extends BaseFragment<FragmentMainBinding> {
 
     @Override
     protected void setupObservers() {
-
         getPeople();
-
     }
 
     private void getPeople() {

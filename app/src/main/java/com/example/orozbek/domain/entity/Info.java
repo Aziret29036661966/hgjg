@@ -11,7 +11,6 @@ public class Info {
     private String prev;
     private List<Result> results;
 
-
     public String getNext() {
         return next;
     }

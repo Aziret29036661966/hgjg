@@ -1,4 +1,4 @@
-package com.example.orozbek.data.network.repos;
+package com.example.orozbek.data.network.starwars;
 
 import com.example.orozbek.domain.entity.Info;
 

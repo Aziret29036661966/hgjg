@@ -1,11 +1,14 @@
-package com.example.orozbek.domain.di;
+package com.example.orozbek.data.network.di;
+
 
 
 import static com.example.orozbek.BuildConfig.MY_URL;
 
-import com.example.orozbek.data.network.repos.CallBackResult;
-import com.example.orozbek.data.network.repos.MainRepo;
-import com.example.orozbek.data.network.repos.StarWars;
+import com.example.orozbek.data.network.repos.MainRepoImpl;
+import com.example.orozbek.data.network.starwars.StarWars;
+import com.example.orozbek.domain.repo.MainRepository;
+import com.example.orozbek.domain.useCases.GetPeopleUseCase;
+import com.example.orozbek.ui.fragment.main.MainViewModel;
 
 import javax.inject.Singleton;
 
@@ -13,13 +16,17 @@ import dagger.Module;
 import dagger.Provides;
 import dagger.hilt.InstallIn;
 import dagger.hilt.components.SingletonComponent;
-import retrofit2.Call;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 @Module
 @InstallIn(SingletonComponent.class)
 public class AppModule {
+
+    @Provides
+    public MainViewModel mainViewModel(GetPeopleUseCase mainRepoImpl){
+        return new MainViewModel(mainRepoImpl);
+    }
 
     @Provides
     @Singleton
@@ -33,7 +40,7 @@ public class AppModule {
 
     @Provides
     @Singleton
-    public MainRepo provideRepo(StarWars api, CallBackResult callBackResult) {
-        return new MainRepo(api, callBackResult);
+    public MainRepository provideRepo(StarWars api) {
+        return new MainRepoImpl(api);
     }
 }

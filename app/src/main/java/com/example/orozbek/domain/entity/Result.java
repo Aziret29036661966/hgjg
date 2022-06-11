@@ -1,12 +1,10 @@
 package com.example.orozbek.domain.entity;
 
 public class Result {
-
-
       private int id;
       private String name;
-      private int height;
-      private int mass;
+      private String height;
+      private String mass;
 
     public int getId() {
         return id;
@@ -24,19 +22,19 @@ public class Result {
         this.name = name;
     }
 
-    public int getHeight() {
+    public String getHeight() {
         return height;
     }
 
-    public void setHeight(int height) {
+    public void setHeight(String height) {
         this.height = height;
     }
 
-    public int getMass() {
+    public String getMass() {
         return mass;
     }
 
-    public void setMass(int mass) {
+    public void setMass(String mass) {
         this.mass = mass;
     }
 }

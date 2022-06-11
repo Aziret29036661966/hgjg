@@ -1,4 +1,4 @@
-package com.example.orozbek.ui.fragment.main;
+package com.example.orozbek.ui.fragment.main.adapter;
 
 import android.annotation.SuppressLint;
 import android.view.LayoutInflater;
@@ -33,9 +33,7 @@ public class AdapterMain extends RecyclerView.Adapter<AdapterMain.ViewHolder> {
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-
         holder.onBind(list.get(position));
-
     }
 
     @Override
