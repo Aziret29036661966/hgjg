@@ -10,4 +10,17 @@
         android:name="com.example.orozbek.ui.fragment.main.MainFragment"
         android:label="fragment_main"
         tools:layout="@layout/fragment_main" />
+
+    <fragment
+        android:id="@+id/planetsFragment"
+        android:name="com.example.orozbek.ui.fragment.planets.PlanetsFragment"
+        android:label="fragment_planets"
+        tools:layout="@layout/fragment_planets" />
+
+    <fragment
+        android:id="@+id/filmsFragment"
+        android:name="com.example.orozbek.ui.fragment.films.FilmsFragment"
+        android:label="fragment_films"
+        tools:layout="@layout/fragment_films" />
+
 </navigation>

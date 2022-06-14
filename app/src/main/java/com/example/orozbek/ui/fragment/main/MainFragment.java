@@ -26,9 +26,7 @@ public class MainFragment extends BaseFragment<FragmentMainBinding> {
         initAdapter();
     }
 
-    private void initViewModel() {
-        viewModel.getPeople();
-    }
+    private void initViewModel() { viewModel.getPeople(); }
 
     private void initAdapter() {
         adapterMainFragment = new AdapterMain();
@@ -41,9 +39,7 @@ public class MainFragment extends BaseFragment<FragmentMainBinding> {
     }
 
     private void getPeople() {
-        viewModel.getLiveData().observe(getViewLifecycleOwner(), info -> {
-            adapterMainFragment.setList(info.getResults());
-        });
+        viewModel.getLiveData().observe(getViewLifecycleOwner(), info -> adapterMainFragment.setList(info.getResults()));
     }
 
 }

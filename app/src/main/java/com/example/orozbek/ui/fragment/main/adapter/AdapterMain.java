@@ -7,18 +7,19 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.orozbek.databinding.ItemBinding;
-import com.example.orozbek.domain.entity.Result;
+import com.example.orozbek.databinding.ItemPeopleBinding;
+
+import com.example.orozbek.domain.entity.people.PeopleResult;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class AdapterMain extends RecyclerView.Adapter<AdapterMain.ViewHolder> {
 
-    public List<Result> list = new ArrayList<>();
+    public List<PeopleResult> list = new ArrayList<>();
 
     @SuppressLint("NotifyDataSetChanged")
-    public void setList(List<Result> list) {
+    public void setList(List<PeopleResult> list) {
         this.list = list;
         notifyDataSetChanged();
     }
@@ -26,7 +27,7 @@ public class AdapterMain extends RecyclerView.Adapter<AdapterMain.ViewHolder> {
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        ItemBinding binding = ItemBinding.inflate(LayoutInflater.from(parent.getContext()),
+        ItemPeopleBinding binding = ItemPeopleBinding.inflate(LayoutInflater.from(parent.getContext()),
                 parent, false);
         return new ViewHolder(binding);
     }
@@ -42,14 +43,14 @@ public class AdapterMain extends RecyclerView.Adapter<AdapterMain.ViewHolder> {
     }
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
-        private ItemBinding binding;
+        private final ItemPeopleBinding binding;
 
-        public ViewHolder(ItemBinding binding) {
+        public ViewHolder(ItemPeopleBinding binding) {
             super(binding.getRoot());
             this.binding = binding;
         }
 
-        public void onBind(Result result) {
+        public void onBind(PeopleResult result) {
             binding.txtHeight.setText(result.getHeight());
             binding.txtName.setText(result.getName());
             binding.txtMass.setText(result.getMass());

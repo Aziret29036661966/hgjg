@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/mainFragment"
+        android:icon="@drawable/ic_baseline_emoji_people_24"
+        android:title="people"
+        />
+    <item
+        android:id="@+id/planetsFragment"
+        android:icon="@drawable/ic_baseline_panorama_photosphere_24"
+        android:title="planets"
+        />
+    <item
+        android:id="@+id/filmsFragment"
+        android:icon="@drawable/ic_baseline_movie_24"
+        android:title="films"/>
+</menu>

@@ -1,6 +1,6 @@
-package com.example.orozbek.domain.entity;
+package com.example.orozbek.domain.entity.people;
 
-public class Result {
+public class PeopleResult {
       private int id;
       private String name;
       private String height;

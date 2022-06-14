@@ -1,15 +1,25 @@
-package com.example.orozbek.domain.entity;
+package com.example.orozbek.domain.entity.planets;
 
 import com.google.gson.annotations.SerializedName;
 
 import java.util.List;
 
-public class Info {
+public class PlanetsInfo {
+
     private int count;
     private String next;
     @SerializedName("previous")
     private String prev;
-    private List<Result> results;
+    private List<PlanetsResult> results;
+
+
+    public int getCount() {
+        return count;
+    }
+
+    public void setCount(int count) {
+        this.count = count;
+    }
 
     public String getNext() {
         return next;
@@ -27,19 +37,12 @@ public class Info {
         this.prev = prev;
     }
 
-    public int getCount() {
-        return count;
-    }
-
-    public void setCount(int count) {
-        this.count = count;
-    }
-
-    public List<Result> getResults() {
+    public List<PlanetsResult> getResults() {
         return results;
     }
 
-    public void setResults(List<Result> results) {
+    public void setResults(List<PlanetsResult> results) {
         this.results = results;
     }
+
 }

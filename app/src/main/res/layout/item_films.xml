@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:paddingHorizontal="39dp"
+    android:paddingVertical="34dp"
+    android:layout_marginTop="40dp"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/txt_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/name"
+        android:textColor="@color/black"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        />
+
+    <TextView
+        android:id="@+id/txt_episode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/height"
+        android:textColor="@color/black"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        />
+
+    <TextView
+        android:id="@+id/txt_director"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/mass"
+        android:textColor="@color/black"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        />
+
+    <TextView
+        android:id="@+id/txt_producer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/mass"
+        android:textColor="@color/black"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        />
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="2dp"
+        android:background="@color/black"/>
+
+</LinearLayout>
